@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/back.webp'); /* Указываем путь к вашему изображению */
+    background-size: cover; /* Растягиваем изображение на весь экран */
+    background-position: center; /* Центрируем изображение */
+    background-attachment: fixed; /* Фиксируем фон при прокрутке страницы */
+    filter: blur(8px); /* Размытие на 8 пикселей */
+    z-index: -1; /* Размещаем фоновое изображение за содержимым */
+  }
+  </style>
+   
+    <a href="index.html">Вернуться на главную страницу</a>
+    <nav class="nav_menu" style="background-color: #909090;">
+        <div class="nav_menu1">
+            <a class="nav_logo" href="index.html">Home</a>
+            <button class="nav_toggle" type="button">
+                <span class="nav_icon"></span>
+            </button>
+        </div>
+        <div class="nav_items" id="nav_menu_content">
+            <ul class="nav_list">
+               
+                <li class="nav_item"><a class="nav_link" href="bodysuit.html">Body Suit</a></li>
+                <li class="nav_item"><a class="nav_link" href="heels.html">heels</a></li>
+                <li class="nav_item"><a class="nav_link" href="knee.html">knee Pads</a></li>
+                <li class="nav_item"><a class="nav_link" href="https://dressfit.store/collections/high-heels/products/shorts-lince-mesh-panther-only-mesh">Shorts</a></li>
+                <li class="nav_item"><a class="nav_link" href="comment.html">comment</a></li>
+            </ul>
+            <form class="nav_search" action="https://www.google.com/search" method="get">
+              <input class="nav_input" type="search" name="q" placeholder="Search">
+              <button class="nav_button" type="submit">search</button>
+          </form>
+          
+        </div>
+    </nav>
+    
+
+    <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="img/body.suit2.webp" alt="foto1">
+          <div class="gallery-text">Model 1 panther</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/body.suit3.webp" alt="fofo2">
+          <div class="gallery-text">Model 2 transparent</div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/back.webp" alt="foto3">
+          <div class="gallery-text">Model 3 red</div>
+        </div>
+        <div class="container3" id="unique-id">
+          <h2></h2>
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>Model</th>
+                      <th>Price</th>
+                      
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Colour 1-black</td>
+                      <td>100$</td>
+                      
+                  </tr>
+                  <tr>
+                      <td>Colour 2-red</td>
+                      <td>100$</td>
+                      
+                  </tr>
+                  <tr>
+                      <td>Colour 3-grey</td>
+                      <td>80$</td>
+                      
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+        <div class="contact-us">
+          <h2>Contact Us</h2>
+          <p>If you have any questions, feel free to reach out to us. We're here to help!</p>
+          
+          <div class="contact-info">
+              <div class="info-item">
+                  <h4>Email:</h4>
+                  <p><a href="mailto:info@example.com">info@example.com</a></p>
+              </div>
+              
+              <div class="info-item">
+                  <h4>Address:</h4>
+                  <p>123 Dance Street, Dance City, DC 12345</p>
+              </div>
+              
+              <div class="info-item">
+                  <h4>Phone:</h4>
+                  <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+              </div>
+              
+              <div class="info-item">
+                  <h4>Social Media:</h4>
+                  <p>
+                      <a href="https://facebook.com/yourpage">Facebook</a> |
+                      <a href="https://twitter.com/yourpage">Twitter</a> |
+                      <a href="https://instagram.com/yourpage">Instagram</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

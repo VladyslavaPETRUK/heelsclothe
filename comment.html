@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .fotoo {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center; /* Центрирует изображения */
+        }
+
+        .fotoo img {
+            max-width: 100%; /* Картинка будет растягиваться по ширине контейнера */
+            height: auto; /* Высота будет пропорциональной ширине */
+            border-radius: 8px; /* Для скругления углов, если нужно */
+        }
+
+        /* Медиа-запрос для мобильных устройств */
+        @media (max-width: 768px) {
+            .fotoo img {
+                width: 100%; /* Изображение будет занимать 100% ширины на мобильных устройствах */
+                height: auto; /* Пропорциональное изменение высоты */
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #d1c8c8;">
+    <a href="index.html">Вернуться на главную страницу</a>
+    <nav class="nav_menu" style="background-color: rgb(210, 194, 194);">
+        <div class="nav_menu1">
+            <a class="nav_logo" href="index.html">Menu</a>
+            <button class="nav_toggle" type="button">
+                <span class="nav_icon"></span>
+            </button>
+        </div>
+        <div class="nav_items" id="nav_menu_content">
+            <ul class="nav_list">
+              
+                <li class="nav_item"><a class="nav_link" href="bodysuit.html">body suit</a></li>
+                <li class="nav_item"><a class="nav_link" href="heels.html">heels</a></li>
+                <li class="nav_item"><a class="nav_link" href="knee.html">knee pads</a></li>
+                <li class="nav_item"><a class="nav_link" href="short.html">Shorts</a></li>
+                <li class="nav_item"><a class="nav_link" href="comment.html">comment</a></li>
+            </ul>
+            <form class="nav_search" action="https://www.google.com/search" method="get">
+                <input class="nav_input" type="search" name="q" placeholder="Search">
+                <button class="nav_button" type="submit">search</button>
+            </form>
+            
+        </div>
+    </nav>
+    <div>
+        <a href="mailto:24vpetruk.bife@wicklowvec.ie" style="color: blue; margin-top: 20px; display: inline-block; padding: 10px;">Send us an email</a>
+    </div>
+    
+  
+    <div class="custom-form-container" style="max-width: 2000px; margin: 0 auto; padding: 20px;margin: 50px;; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+        <h3 style="text-align: center; color: #333;">Leave your comment</h3>
+        <form action="submit_form.php" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <label for="name" style="font-size: 14px; color: #555;">Name:</label>
+            <input type="text" id="name" name="name" required style="padding: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+            
+            <label for="email" style="font-size: 14px; color: #555;">Email:</label>
+            <input type="email" id="email" name="email" required style="padding: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+            
+            <label for="message" style="font-size: 14px; color: #555;">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" style="padding: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+            
+            <button type="submit" style="background-color: #6f0c0c; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+                Send
+            </button>
+        </form>
+    </div>
+
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us. We're here to help!</p>
+        
+        <div class="contact-info">
+            <div class="info-item">
+                <h4>Email:</h4>
+                <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+            
+            <div class="info-item">
+                <h4>Address:</h4>
+                <p>123 Dance Street, Dance City, DC 12345</p>
+            </div>
+            
+            <div class="info-item">
+                <h4>Phone:</h4>
+                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+            
+            <div class="info-item">
+                <h4>Social Media:</h4>
+                <p>
+                    <a href="https://facebook.com/yourpage">Facebook</a> |
+                    <a href="https://twitter.com/yourpage">Twitter</a> |
+                    <a href="https://instagram.com/yourpage">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+   
+</body>
+</html>
