@@ -1,0 +1,624 @@
+/* Общие стили */
+/* Применяем шрифт Montserrat ко всем элементам на странице */
+* {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Применяем шрифт Montserrat */
+    background-color: #494343d4;
+}
+
+/* Навигационное меню */
+.nav_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ebe2e8;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Логотип и кнопка */
+.nav_menu1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav_logo {
+    font-size: 24px;
+   
+    color: #0c0000;
+
+}
+
+.nav_toggle {
+    display: none; /* Можно включить для мобильных */
+    background: none;
+    border: none;
+}
+
+.nav_icon {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+}
+
+/* Список навигации */
+.nav_items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav_item {
+    margin: 0 15px;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav_link:hover {
+    color: #1b0202d8; ;
+}
+
+/* Форма поиска */
+.nav_search {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.nav_input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nav_button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color:#1b0202d8; 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav_button:hover {
+    background-color:#1b0202d8; 
+}
+/* Общие стили для карусели */
+/* Общие стили для карусели */
+/* Для изображения */
+.carousel-image {
+    width: 50%;             /* Изображение будет занимать 50% ширины */
+    height: auto;           /* Высота подстраивается */
+    object-fit: contain;    /* Масштабируем изображение, чтобы оно вмещалось */
+    margin: 0 auto;         /* Центрируем изображение по горизонтали */
+}
+
+/* Для слайдов */
+.carousel-slide {
+    display: flex;          /* Используем flexbox для выравнивания */
+    justify-content: center;/* Центрируем слайд по горизонтали */
+    align-items: center;    /* Центрируем слайд по вертикали */
+    width: 100%;  
+             /* Слайд занимает всю ширину контейнера */
+    flex-direction: column;
+}
+
+/* Для фона */
+.carousel {
+    width: 100%;             /* Растягиваем карусель на всю ширину экрана */
+    max-width: 100%;         /* Максимальная ширина - 100% */
+    overflow: hidden;        /* Скрываем всё, что выходит за пределы */
+    position: relative;      /* Для правильного позиционирования кнопок и слайдов */
+}
+
+/* Стиль для фона */
+.carousel-slides {
+    display: flex;
+    justify-content: center;  /* Центрируем содержимое по горизонтали */
+    align-items: center;      /* Центрируем по вертикали */
+    width: 100%;              /* Фон слайда растягивается на всю ширину */
+    height: 100vh;            /* Фон растягивается по высоте экрана */
+    background-color: #1b0202d8;   /* Цвет фона (можно изменить) */
+}
+
+/* Чтобы изображения не обрезались, можно использовать object-fit: contain */
+.carousel-image { 
+    object-fit: cover;   
+}
+        /* Изображение масштабируется, чтобы вмещаться в контейнер *пЕРЕДЕЛАЛА!!!!!!!!!/
+
+
+/* Стрелки переключения */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.063);
+    cursor: pointer;
+    z-index: 100;            /* Чтобы кнопки не перекрывались другими элементами */
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Капшн для каждого слайда */
+/* Добавляем стили для контейнера с текстом в карусели */
+.carousel-caption {
+    position: absolute;         /* Позиционируем относительно контейнера */
+    bottom: 1px;               /* Позиционируем снизу */
+    left: 50%;                  /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Сдвигаем на 50% от ширины элемента, чтобы центрировать */
+    text-align: center;         /* Центрируем текст внутри контейнера */
+    color: rgba(255, 255, 255, 0.8); /* Белый цвет с прозрачностью */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    padding: 20px;              /* Отступы внутри контейнера */
+    width: 100%;                 /* Ширина контейнера для текста */
+    box-sizing: border-box;     /* Чтобы padding не выходил за пределы */
+}
+
+.carousel-caption h5, .carousel-caption p {
+    margin-bottom: 10px; /* Отступ между заголовком и текстом */
+    line-height: 1.4; /* Увеличиваем межстрочный интервал */
+    color: #ccc;
+}
+
+/* Общие стили для контейнера */
+.container {
+    margin: 0 auto;      /* Центрируем контейнер */
+    padding: 20px;       /* Отступы от краев */
+}
+
+.row {
+    display: flex;        /* Используем flexbox для рядов */
+    flex-wrap: wrap;      /* Позволяем элементам переноситься */
+    gap: 20px;            /* Отступы между элементами */
+}
+
+/* Стили для секции с изображениями */
+.main-section {
+    padding: 15px;          /* Отступы вокруг контента */
+    background-color: #08a81500; /* Цвет фона для секции */
+    margin-bottom: 20px;     /* Отступ снизу */
+}
+
+.main-img {
+    width: 100%;            /* Изображение растягивается по ширине */
+    height: auto;           /* Сохраняем пропорции изображения */
+    object-fit: contain;    /* Масштабируем изображение, не обрезая */
+}
+
+/* Стили для боковой панели */
+.sidebar {
+    padding: 15px;
+    background-color: #0b7a8808; /* Немного другой фон для боковой панели */
+    margin-bottom: 20px;
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+    .col-sm-12 {
+        width: 100%;          /* На мобильных устройствах элементы занимают 100% ширины */
+    }
+}
+
+/* Стили для заголовков */
+h1, p, a {
+    font-family: 'Montserrat', sans-serif !important;
+}
+h2 {
+    font-size: 24px;
+    color: #333; /* Темный цвет текста */
+    margin-bottom: 10px;
+}
+
+/* Стили для текста */
+p {
+    font-size: 16px;
+    color: #3b3636; /* Более светлый цвет для текста */
+}
+
+/* Стили для карты изображений */
+map {
+    display: block;
+    margin-top: 10px;
+}
+/* Общие стили для контейнера */
+.container1{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Flexbox для выравнивания и адаптивности */
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Стили для каждого блока box */
+.box {
+    flex: 1 1 calc(25% - 20px); /* Каждый блок занимает 25% ширины с отступом */
+    padding: 15px;
+    background-color: #f8f8f8;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+/* Hover эффект */
+.box:hover {
+    transform: scale(1.05);
+    background-color: #a29797;
+}
+
+/* Стили для заголовков и текста внутри box */
+.box h2 {
+    font-size: 22px;
+    color: #1f1616;
+}
+
+.box p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Стили для ссылок */
+.box a {
+    text-decoration: none;
+    color: #570303; ;
+}
+
+.box a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность: для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 100%; /* На маленьких экранах блоки будут занимать 100% ширины */
+    }
+}
+.container3 {
+    width: 80%; /* Ограничиваем ширину контейнера */
+    max-width: 800px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 0px; /* Добавляем отступы для улучшения внешнего вида */
+    background-color: #f9f9f9; /* Цвет фона контейнера */ 
+  
+}
+
+.table {
+    width: 100%; /* Устанавливаем таблицу на 100% ширины контейнера */
+    border-collapse: collapse; /* Убираем промежутки между ячейками */
+}
+
+.table-bordered {
+    border: 1px solid #ddd; /* Добавляем границу вокруг таблицы */
+}
+
+th, td {
+    padding: 30px; /* Отступы внутри ячеек */
+    text-align: center; /* Выравнивание текста по центру */
+  
+}
+
+th {
+    background-color: #691313c4; /* Цвет фона для заголовков */
+}
+
+
+/*НИЖЕ БУДЕТ ВТОРОЙ ФАЙЛ CSS-SECONS CSS*/
+
+
+
+
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 50px;
+}
+
+/* Стили для каждого изображения */
+.image-item {
+    position: relative;
+    overflow: hidden; 
+    width: 500px; 
+    height: 400px; 
+   
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
+    opacity: 0;
+    transform: translateY(50px); /* Начальная позиция за пределами экрана */
+    animation: appear 4s ease-out forwards; /* Анимация появления */
+}
+
+/* Анимация появления */
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Эффект подсветки при наведении */
+.image-item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Увеличенная тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Стили для изображений */
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполнение блока изображением */
+    transition: transform 0.3s ease;
+}
+
+/* Эффект на изображение при наведении */
+.image-item:hover .image {
+    transform: scale(1.1); /* Немного увеличиваем изображение */
+}
+
+.purchase-links {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    gap: 10px;             
+}
+
+.purchase-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ebdbdb;
+    transition: color 0.3s;
+}
+
+.purchase-links a:hover {
+    color: #540707;
+}
+/* Блок с описанием каблуков */
+/* Блок с описанием каблуков */
+.heels-description {
+    width: 80%;  /* Контейнер будет занимать 80% ширины экрана */
+    max-width: 900px;  /* Максимальная ширина блока */
+    margin: 0 auto;  /* Центрирование блока по горизонтали */
+    padding: 20px;  /* Отступы внутри блока */
+    text-align: center;  /* Центрирование текста внутри блока */
+  
+    border-radius: 10px;  /* Округленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Легкая тень для блока */
+}
+
+/* Заголовок внутри блока */
+.heels-description h3 {
+    font-size: 2rem;  /* Размер шрифта для заголовка */
+    margin-bottom: 15px;  /* Отступ снизу */
+    color:#e4d5d5;
+}    
+
+.container{
+ display: flex;
+    justify-content: center; /* Центрируем все блоки в контейнере */
+    flex-wrap: wrap;         /* Блоки будут переноситься на следующую строку, если не помещаются */
+    padding: 20px;
+    background: none;  
+}
+
+.row1 {
+    display: flex;
+    justify-content: center; /* Центрируем блоки внутри строки */
+    flex-wrap: wrap;         /* Блоки будут переноситься, если не помещаются в строку */
+}
+
+.box {
+    padding: 20px;             /* Внутренние отступы */
+    border-radius: 10px;       /* Округленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    width: 200px;              /* Ширина каждого блока */
+    text-align: center;        /* Текст по центру */
+    background-color: silver; /* Фон у каждого отдельного блока */
+    margin: 40px;              /* Отступы между блоками */
+}
+
+.box h2 {
+    font-size: 1.5rem; /* Размер заголовка */
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1rem; /* Размер текста внутри блока */
+    margin: 0;
+}
+
+.box a {
+    text-decoration: none;  /* Убираем подчеркивание */
+    color:#e7d2d2;         /* Цвет ссылки */
+    transition: color 0.3s;
+}
+
+.box a:hover {
+    color:blue;         
+}
+.container3 {
+    width: 80%; /* Ограничиваем ширину контейнера */
+    max-width: 800px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 20px; /* Добавляем отступы для улучшения внешнего вида */
+    background-color: #f9f9f9; /* Цвет фона контейнера */
+    border-radius: 8px; /* Скругленные углы */
+}
+
+
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Применяем шрифт Montserrat */
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+/*ВСЕ ЧТО НИЖЕ-ЄТО CSS BODY SUIT*/
+
+
+h1 {
+    color: #333;
+}
+
+/* Контейнер для картинок */
+/* Контейнер для картинок */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.gallery-text {
+    padding: 20px;
+    font-size: 18px;
+    color: #1a1313;
+}
+.text1{
+    width: 600px;  
+            height: 400px;  
+           
+            padding: 10px; 
+            text-align: center;
+            position: absolute;  
+            top: 110%;  
+            left: 34%;
+            color: #fffcfc;
+            font-size: 40px;
+           
+}
+
+/* Стили для блока Contact Us */
+/* Стили для блока Contact Us */
+/* Стили для блока Contact Us */
+/* Стили для блока Contact Us */
+/* Убираем верхний отступ у блока .contact-us */
+/* Используем отрицательные отступы для блока .contact-us, чтобы подвинуть его вверх */
+.contact-us {
+    
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 200px; /* Применяем отрицательный верхний отступ */
+}
+
+
+.contact-us h2 {
+    font-size: 2rem;
+    color: rgb(11, 10, 10); /* Белый цвет для заголовка */
+    text-align: left; /* Заголовок выравнивается по левому краю */
+}
+
+.contact-us p {
+    font-size: 1rem;
+    color: rgb(16, 14, 14); /* Белый цвет для текста */
+    text-align: left; /* Текст выравнивается по левому краю */
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item h4 {
+    font-size: 1.2rem;
+    color: rgb(47, 45, 45); /* Белый цвет для подзаголовков */
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: rgb(15, 15, 15); /* Белый цвет для текста */
+}
+
+.info-item a {
+    color: #2a79c3; /* Белый цвет для ссылок */
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+/* Убираем отступы у предыдущего блока (например, карусели или другой секции) */
+.previous-section {
+    margin-bottom: 0; /* Убираем нижний отступ */
+}
