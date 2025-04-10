@@ -11,15 +11,26 @@
     
 </head>
 <body style="background-color: #d1c8c8;">
-    <a href="index.html">Вернуться на главную страницу</a>
+    <a href="index.html">home page</a>
+    
+    
     <nav class="nav_menu" style="background-color: rgb(201, 198, 198);">
 
         <div class="nav_menu1">
-            <a class="nav_logo" href="index.html">Home</a>
-            <button class="nav_toggle" type="button">
+            <div class="nav_menu1">
+                <a class="nav_logo" href="index.html">Home</a>
+                <button class="nav_toggle" type="button">
+                    <span class="nav_icon"></span>
+                </button>
+            </div>
+            
+            <button class="nav_toggle" id="navToggle">
+                <span class="nav_icon"></span>
+                <span class="nav_icon"></span>
                 <span class="nav_icon"></span>
             </button>
         </div>
+        
         <div class="nav_items" id="nav_menu_content">
             <ul class="nav_list">
                
@@ -131,6 +142,18 @@
             </div>
         </div>
     </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.getElementById('navToggle');
+        const navMenuContent = document.getElementById('nav_menu_content');
 
+        navToggle.addEventListener('click', function() {
+            navMenuContent.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    });
+</script>
+    
 
+</body>
  
